@@ -2,6 +2,13 @@ package com.gildedrose;
 
 public class BackstagePassesItem implements ItemType {
 
+	/* Backstage Passes Item Type
+	 * 1) SellIn decrease by 1
+	 * 2) Quality increases by 1
+	 * 3) Quality increases by 2 if item's selling date is Less than 10
+	 * 4) Quality increases by 3 if item's selling date is Less than 5
+	 * 5) Quality is zero if concert date has passed (negative sellIn)
+	 */
 	@Override
 	public void updateItem(Item item) {
 		updateSellIn(item,1);
